@@ -1,0 +1,32 @@
+<%- include('../partials/header.ejs')  %>
+
+<title>CADASTRO DE MANGAS </title>
+
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <%- include('../partials/menu.ejs') %>
+
+        <div class="card mt-2">
+            <div class="card-header">CADASTRO DE MANGA</div>
+        </div>
+
+        <div class="card-body">
+            <form action="http://localhost:3000/inserirManga" method="post">
+                
+                <label for="">MANGA</label>
+                <input type="text" class="form-control" 
+                        name="nome_mangas" id="nome_mangas"
+                        placeholder="DIGITE UM manga">
+                
+                <button class="btn btn-success mt-2">CADASTRAR</button>
+            </form>
+        </div>
+    </div>
+
+    </body>
+
+<%- include('../partials/footer.ejs')  %>

@@ -1,0 +1,39 @@
+<%- include('../partials/header.ejs')  %>
+
+<title>EDIÇÃO DE MANGAS </title>
+
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <%- include('../partials/menu.ejs') %>
+
+        <div class="card mt-2">
+            <div class="card-header">EDIÇÃO DE CATEGORIAS</div>
+        </div>
+
+        <div class="card-body">
+            <form action="http://localhost:3001/alterarManga" method="post">
+                
+                <label for="">MANGA</label>
+
+                <input
+                    type="hidden"
+                    name="id" id="id"
+                    value="<%= manga.id %>"/>
+
+                <input type="text" class="form-control" 
+                        name="nome_mangas" id="nome_mangas"
+                        placeholder="DIGITE UM MANGA"
+                        value="<%= manga.nome_mangas %>">
+                
+                <button class="btn btn-success mt-2">EDITAR</button>
+            </form>
+        </div>
+    </div>
+
+    </body>
+
+<%- include('../partials/footer.ejs')  %>
